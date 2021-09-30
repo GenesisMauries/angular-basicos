@@ -1,0 +1,21 @@
+<p>Directivas estructurales</p>
+
+<section *ngIf="eresed !== '' else notErase">
+    <p>Heroe borrado: <small>{{eresed}}</small></p>
+</section>
+<!-- Componente propio de angular, no tiene contraparte en HTML -->
+<ng-template #notErase> <!--Referencia local -->
+    <p>No ha borrado nada</p>
+</ng-template>
+
+
+<button (click)='eraseHero()'>Borrar Heroes</button>
+
+
+
+<p>Listado con *ngFor</p>
+<ol>
+    <li *ngFor="let heroe of heroes; let i = index">{{i+1}}-{{heroe}}</li>
+</ol>
+
+
