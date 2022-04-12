@@ -1,0 +1,20 @@
+<h3>Directivas estructurales <code>*ngIf && *ngFor</code></h3>
+
+<section *ngIf="heroeBorrado; else noBorrado">
+    <h3>Heroes borrados</h3>
+    <span>{{heroeBorrado}}</span>
+</section>
+<!-- Componente propio de angular, no tiene contraparte en HTML -->
+<ng-template #noBorrado><h3>No ha borrado nada</h3></ng-template>
+
+
+<button (click)="borrarHeroe()">Borrar</button>
+
+<p>Listado con *ngFor</p>
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+        {{i + 1}}-{{heroe}}
+    </li>
+</ul>
+
+
