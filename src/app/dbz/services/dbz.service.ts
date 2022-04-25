@@ -38,8 +38,4 @@ export class DbzService {
     agregarPersonajes(personaje: Personaje): void {
         this._personajes.push(personaje)
     }
-
-
-
-
 }
